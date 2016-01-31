@@ -77,6 +77,12 @@ class Request(object):
     def request_type(self):
         return self.request["request"]["type"]
 
+    def request_id(self):
+        return self.request["request"]["requestId"]
+
+    def timestamp(self):
+        return self.request["request"]["timestamp"]
+
     def intent_name(self):
         if not "intent" in self.request["request"]:
             return None
